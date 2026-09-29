@@ -1,0 +1,231 @@
+/* ============================================
+   ABOUT PAGE
+   ============================================ */
+
+/* — Image Section — */
+.about-image-wrapper {
+  position: relative;
+}
+
+.about-img-frame {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.about-img-frame img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+.about-experience-badge {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: var(--gradient-gold);
+  color: var(--primary);
+  padding: 20px 28px;
+  border-radius: var(--radius-xl);
+  text-align: center;
+  box-shadow: var(--shadow-gold-lg);
+}
+
+.about-experience-badge .exp-years {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: var(--fw-extrabold);
+  line-height: 1;
+}
+
+.about-experience-badge .exp-text {
+  display: block;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wide);
+  margin-top: 4px;
+}
+
+/* — Text Content — */
+.about-text-content .section-title {
+  text-align: left;
+  margin-bottom: var(--space-md);
+}
+
+/* — Highlights Grid — */
+.about-highlights-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.highlight-card {
+  display: flex;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+}
+
+.highlight-card:hover {
+  border-color: rgba(212, 168, 75, 0.3);
+  background: var(--glass-light);
+}
+
+.highlight-card .icon {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.highlight-card .icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.highlight-card h4 {
+  font-size: var(--fs-small);
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.highlight-card p {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+/* — Vision & Mission Cards — */
+.vision-card {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-3xl);
+  transition: all var(--transition-base);
+  backdrop-filter: blur(20px);
+}
+
+.vision-card:hover {
+  background: var(--glass-light);
+  border-color: rgba(212, 168, 75, 0.3);
+  transform: translateY(-4px);
+}
+
+.vision-card .card-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(212, 168, 75, 0.15);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-lg);
+  color: var(--accent);
+}
+
+.vision-card .card-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.vision-card h3 {
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+}
+
+.vision-card p {
+  color: var(--text-secondary);
+  line-height: var(--lh-relaxed);
+}
+
+/* — Value Cards — */
+.value-card {
+  text-align: center;
+  padding: var(--space-2xl);
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+}
+
+.value-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212, 168, 75, 0.3);
+  box-shadow: 0 8px 32px rgba(212, 168, 75, 0.1);
+}
+
+.value-card .value-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto var(--space-lg);
+  background: rgba(212, 168, 75, 0.1);
+  border-radius: var(--radius-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+}
+
+.value-card .value-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.value-card h4 {
+  margin-bottom: var(--space-sm);
+  color: var(--text-primary);
+}
+
+.value-card p {
+  font-size: var(--fs-small);
+  color: var(--text-muted);
+}
+
+/* — Brands Grid — */
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-lg);
+}
+
+.brand-item-card {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  transition: all var(--transition-base);
+}
+
+.brand-item-card:hover {
+  border-color: rgba(212, 168, 75, 0.3);
+  transform: translateY(-4px);
+}
+
+.brand-item-card h4 {
+  font-size: var(--fs-h4);
+  color: var(--accent);
+  margin-bottom: var(--space-xs);
+}
+
+.brand-item-card p {
+  font-size: var(--fs-small);
+  color: var(--text-muted);
+}
+
+/* — Responsive — */
+@media (max-width: 1024px) {
+  .about-highlights-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-img-frame img {
+    height: 320px;
+  }
+  .about-experience-badge {
+    bottom: -10px;
+    right: 10px;
+  }
+}

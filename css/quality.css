@@ -1,0 +1,145 @@
+/* ============================================
+   QUALITY & CERTIFICATIONS PAGE
+   ============================================ */
+
+.quality-image-card {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.quality-image-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* — Certifications Grid — */
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-xl);
+}
+
+.cert-card {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
+  text-align: center;
+  transition: all var(--transition-base);
+}
+
+.cert-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212, 168, 75, 0.3);
+  box-shadow: 0 8px 32px rgba(212, 168, 75, 0.1);
+}
+
+.cert-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto var(--space-lg);
+  background: rgba(212, 168, 75, 0.12);
+  border-radius: var(--radius-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+}
+
+.cert-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.cert-card h3 {
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.cert-spec {
+  color: var(--accent);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+  margin-bottom: var(--space-md);
+}
+
+.cert-card p:last-child {
+  color: var(--text-muted);
+  font-size: var(--fs-small);
+  line-height: var(--lh-relaxed);
+}
+
+/* — Testing Cards — */
+.test-card {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
+  transition: all var(--transition-base);
+}
+
+.test-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(212, 168, 75, 0.3);
+}
+
+.test-num {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: var(--fw-extrabold);
+  color: var(--accent);
+  opacity: 0.3;
+  margin-bottom: var(--space-sm);
+}
+
+.test-card h4 {
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.test-card p {
+  color: var(--text-muted);
+  font-size: var(--fs-small);
+  line-height: var(--lh-relaxed);
+}
+
+/* — Standards Badges — */
+.standards-detail-box {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
+}
+
+.standards-detail-box h4 {
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.standards-detail-box p {
+  color: var(--text-muted);
+  line-height: var(--lh-relaxed);
+}
+
+.standards-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.badge-item {
+  padding: 8px 18px;
+  background: rgba(212, 168, 75, 0.1);
+  border: 1px solid rgba(212, 168, 75, 0.3);
+  border-radius: var(--radius-pill);
+  color: var(--accent);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+}
+
+@media (max-width: 768px) {
+  .quality-image-card img {
+    height: 280px;
+  }
+}
