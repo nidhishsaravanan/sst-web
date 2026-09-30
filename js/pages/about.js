@@ -7,7 +7,9 @@ import { ICONS, buildWhatsAppUrl } from '../utils/helpers.js';
 export function renderAboutPage() {
   const whatsappUrl = buildWhatsAppUrl(SITE_CONFIG.whatsappNumber, "Hello Sree Swamy Traders, I would like to learn more about your pipe dealership options and supply capabilities.");
 
-  return `
+
+
+  return `        
     <div class="page-wrapper pt-header">
       <!-- Page Hero -->
       <section class="page-hero">
