@@ -173,7 +173,7 @@
   width: 20px;
   height: 20px;
   min-width: 20px;
-  background: rgba(212, 168, 75, 0.15);
+  background: rgba(237, 50, 55, 0.15);
   color: var(--accent);
   border-radius: var(--radius-full);
   display: flex;
@@ -258,7 +258,7 @@
 }
 
 .application-tag:hover {
-  background: rgba(212, 168, 75, 0.1);
+  background: rgba(237, 50, 55, 0.1);
   color: var(--accent-dark);
 }
 

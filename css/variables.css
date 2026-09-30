@@ -1,42 +1,47 @@
 /* ============================================
    SREE SWAMY TRADERS — Design System Tokens
+   Supreme Industries Inspired Color Scheme
    ============================================ */
 
 :root {
-  /* ── Primary Colors ── */
-  --primary: #0A1628;
-  --primary-light: #132040;
-  --primary-medium: #1A2D50;
+  /* ── Primary Colors (Supreme Red) ── */
+  --primary: #ED3237;
+  --primary-light: #F05A5E;
+  --primary-medium: #D42B30;
+  --primary-dark: #B8232A;
   
-  /* ── Accent (Gold) ── */
-  --accent: #D4A84B;
-  --accent-light: #E8C97A;
-  --accent-dark: #B8922F;
-  --accent-glow: rgba(212, 168, 75, 0.3);
+  /* ── Accent (Red - same as primary for Supreme style) ── */
+  --accent: #ED3237;
+  --accent-light: #F05A5E;
+  --accent-dark: #B8232A;
+  --accent-glow: rgba(237, 50, 55, 0.25);
   
   /* ── Secondary Blues ── */
-  --secondary: #1E3A5F;
-  --secondary-light: #2A4F7F;
-  --secondary-dark: #142A47;
+  --secondary: #337AB7;
+  --secondary-light: #4A9AD4;
+  --secondary-dark: #286090;
   
   /* ── Text ── */
-  --text-primary: #FFFFFF;
-  --text-secondary: #B0BEC5;
-  --text-muted: #78909C;
-  --text-dark: #1A1A2E;
-  --text-dark-secondary: #4A4A6A;
+  --text-primary: #3D3D3D;
+  --text-secondary: #707070;
+  --text-muted: #9E9E9E;
+  --text-dark: #3D3D3D;
+  --text-dark-secondary: #707070;
+  --text-white: #FFFFFF;
+  --text-on-primary: #FFFFFF;
   
   /* ── Surfaces ── */
-  --surface: #F8F9FA;
-  --surface-alt: #EDF1F5;
-  --surface-dark: #0D1B2A;
+  --surface: #F5F5F5;
+  --surface-alt: #E8F0F2;
+  --surface-dark: #3D3D3D;
   --surface-card: #FFFFFF;
+  --surface-white: #FFFFFF;
   
-  /* ── Glassmorphism ── */
-  --glass: rgba(255, 255, 255, 0.06);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-light: rgba(255, 255, 255, 0.12);
-  --glass-dark: rgba(10, 22, 40, 0.85);
+  /* ── Glassmorphism (adapted for light theme) ── */
+  --glass: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --glass-light: rgba(255, 255, 255, 0.95);
+  --glass-dark: rgba(61, 61, 61, 0.92);
   
   /* ── Status Colors ── */
   --success: #4CAF50;
@@ -45,12 +50,14 @@
   --info: #2196F3;
   
   /* ── Gradients ── */
-  --gradient-gold: linear-gradient(135deg, #D4A84B, #E8C97A);
-  --gradient-gold-hover: linear-gradient(135deg, #E8C97A, #D4A84B);
-  --gradient-dark: linear-gradient(180deg, #0A1628 0%, #132040 100%);
-  --gradient-hero: linear-gradient(135deg, rgba(10, 22, 40, 0.92) 0%, rgba(30, 58, 95, 0.85) 100%);
-  --gradient-card: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
-  --gradient-section: linear-gradient(180deg, #0D1B2A 0%, #0A1628 50%, #132040 100%);
+  --gradient-primary: linear-gradient(135deg, #ED3237, #F05A5E);
+  --gradient-primary-hover: linear-gradient(135deg, #F05A5E, #ED3237);
+  --gradient-gold: linear-gradient(135deg, #ED3237, #F05A5E);
+  --gradient-gold-hover: linear-gradient(135deg, #F05A5E, #ED3237);
+  --gradient-dark: linear-gradient(180deg, #3D3D3D 0%, #2A2A2A 100%);
+  --gradient-hero: linear-gradient(135deg, rgba(237, 50, 55, 0.88) 0%, rgba(61, 61, 61, 0.92) 100%);
+  --gradient-card: linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(245,245,245,0.7) 100%);
+  --gradient-section: linear-gradient(180deg, #F5F5F5 0%, #FFFFFF 50%, #E8F0F2 100%);
   
   /* ── Typography ── */
   --font-heading: 'Outfit', sans-serif;
@@ -106,14 +113,15 @@
   --radius-full: 50%;
   --radius-pill: 100px;
   
-  /* ── Shadows ── */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
-  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.2);
-  --shadow-gold: 0 4px 24px rgba(212, 168, 75, 0.3);
-  --shadow-gold-lg: 0 8px 40px rgba(212, 168, 75, 0.25);
-  --shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+  /* ── Shadows (lighter for white theme) ── */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.12);
+  --shadow-gold: 0 4px 24px rgba(237, 50, 55, 0.2);
+  --shadow-gold-lg: 0 8px 40px rgba(237, 50, 55, 0.18);
+  --shadow-primary: 0 4px 24px rgba(237, 50, 55, 0.2);
+  --shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.04);
   
   /* ── Transitions ── */
   --transition-fast: 150ms ease;

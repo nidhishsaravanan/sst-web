@@ -22,7 +22,7 @@
   position: absolute;
   bottom: -20px;
   right: -20px;
-  background: var(--gradient-gold);
+  background: var(--accent);
   color: var(--primary);
   padding: 20px 28px;
   border-radius: var(--radius-xl);
@@ -71,7 +71,7 @@
 }
 
 .highlight-card:hover {
-  border-color: rgba(212, 168, 75, 0.3);
+  border-color: rgba(237, 50, 55, 0.3);
   background: var(--glass-light);
 }
 
@@ -108,14 +108,14 @@
 
 .vision-card:hover {
   background: var(--glass-light);
-  border-color: rgba(212, 168, 75, 0.3);
+  border-color: rgba(237, 50, 55, 0.3);
   transform: translateY(-4px);
 }
 
 .vision-card .card-icon {
   width: 60px;
   height: 60px;
-  background: rgba(212, 168, 75, 0.15);
+  background: rgba(237, 50, 55, 0.15);
   border-radius: var(--radius-lg);
   display: flex;
   align-items: center;
@@ -151,15 +151,15 @@
 
 .value-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(212, 168, 75, 0.3);
-  box-shadow: 0 8px 32px rgba(212, 168, 75, 0.1);
+  border-color: rgba(237, 50, 55, 0.3);
+  box-shadow: 0 8px 32px rgba(237, 50, 55, 0.1);
 }
 
 .value-card .value-icon {
   width: 70px;
   height: 70px;
   margin: 0 auto var(--space-lg);
-  background: rgba(212, 168, 75, 0.1);
+  background: rgba(237, 50, 55, 0.1);
   border-radius: var(--radius-xl);
   display: flex;
   align-items: center;
@@ -198,7 +198,7 @@
 }
 
 .brand-item-card:hover {
-  border-color: rgba(212, 168, 75, 0.3);
+  border-color: rgba(237, 50, 55, 0.3);
   transform: translateY(-4px);
 }
 

@@ -40,8 +40,8 @@
   width: 50px;
   height: 50px;
   border-radius: var(--radius-lg);
-  background: rgba(212, 168, 75, 0.12);
-  border: 1px solid rgba(212, 168, 75, 0.25);
+  background: rgba(237, 50, 55, 0.12);
+  border: 1px solid rgba(237, 50, 55, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -150,12 +150,12 @@
 .form-select:focus,
 .form-textarea:focus {
   border-color: var(--accent);
-  background: rgba(212, 168, 75, 0.04);
-  box-shadow: 0 0 0 4px rgba(212, 168, 75, 0.15);
+  background: rgba(237, 50, 55, 0.04);
+  box-shadow: 0 0 0 4px rgba(237, 50, 55, 0.15);
 }
 
 .form-select option {
-  background: var(--primary);
+  background: #FFFFFF;
   color: var(--text-primary);
 }
 

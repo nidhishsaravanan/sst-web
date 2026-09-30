@@ -3,8 +3,8 @@
    ============================================ */
 
 .footer {
-  background: var(--primary);
-  color: var(--text-secondary);
+  background: #3D3D3D;
+  color: #B0BEC5;
   position: relative;
   overflow: hidden;
 }
@@ -41,7 +41,7 @@
 .footer-about .footer-logo-icon {
   width: 44px;
   height: 44px;
-  background: var(--gradient-gold);
+  background: var(--accent);
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
@@ -49,14 +49,14 @@
   font-family: var(--font-heading);
   font-weight: var(--fw-extrabold);
   font-size: 1.2rem;
-  color: var(--primary);
+  color: #FFFFFF;
 }
 
 .footer-about .footer-logo-text {
   font-family: var(--font-heading);
   font-weight: var(--fw-bold);
   font-size: 1.15rem;
-  color: var(--text-primary);
+  color: #FFFFFF;
 }
 
 .footer-about p {
@@ -78,15 +78,15 @@
   align-items: center;
   justify-content: center;
   border-radius: var(--radius-full);
-  background: var(--glass);
-  border: 1px solid var(--glass-border);
-  color: var(--text-secondary);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: #B0BEC5;
   transition: all var(--transition-base);
 }
 
 .footer-social a:hover {
   background: var(--accent);
-  color: var(--primary);
+  color: #FFFFFF;
   border-color: var(--accent);
   transform: translateY(-3px);
 }
@@ -98,7 +98,7 @@
 
 /* ── Footer Links ── */
 .footer-column h4 {
-  color: var(--text-primary);
+  color: #FFFFFF;
   font-size: var(--fs-small);
   font-weight: var(--fw-semibold);
   text-transform: uppercase;
@@ -115,7 +115,7 @@
   left: 0;
   width: 30px;
   height: 2px;
-  background: var(--gradient-gold);
+  background: var(--accent);
   border-radius: var(--radius-pill);
 }
 
@@ -165,7 +165,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--glass);
+  background: rgba(255,255,255,0.08);
   border-radius: var(--radius-full);
   color: var(--accent);
 }
@@ -176,7 +176,7 @@
 }
 
 .footer-contact-item .info h5 {
-  color: var(--text-primary);
+  color: #FFFFFF;
   font-size: var(--fs-small);
   font-weight: var(--fw-medium);
   margin-bottom: 2px;
@@ -196,7 +196,7 @@
 /* ── Footer Bottom ── */
 .footer-bottom {
   padding: var(--space-lg) 0;
-  border-top: 1px solid var(--glass-border);
+  border-top: 1px solid rgba(255,255,255,0.1);
 }
 
 .footer-bottom-inner {
@@ -238,8 +238,8 @@
   right: 30px;
   width: 48px;
   height: 48px;
-  background: var(--gradient-gold);
-  color: var(--primary);
+  background: var(--accent);
+  color: #FFFFFF;
   border-radius: var(--radius-full);
   display: flex;
   align-items: center;
@@ -250,7 +250,7 @@
   visibility: hidden;
   transform: translateY(20px);
   transition: all var(--transition-base);
-  box-shadow: var(--shadow-gold);
+  box-shadow: var(--shadow-primary);
   border: none;
 }
 

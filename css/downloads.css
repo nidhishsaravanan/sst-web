@@ -33,7 +33,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: var(--gradient-gold);
+  background: var(--accent);
   opacity: 0;
   transition: opacity var(--transition-fast);
 }
@@ -52,8 +52,8 @@
   width: 60px;
   height: 60px;
   border-radius: var(--radius-lg);
-  background: rgba(212, 168, 75, 0.1);
-  border: 1px solid rgba(212, 168, 75, 0.2);
+  background: rgba(237, 50, 55, 0.1);
+  border: 1px solid rgba(237, 50, 55, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;

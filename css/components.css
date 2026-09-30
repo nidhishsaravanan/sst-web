@@ -25,7 +25,7 @@
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md); }
 
 .contact-info-wrapper { display: flex; flex-direction: column; gap: var(--space-2xl); }
-.contact-info-card { background: var(--primary); border-radius: var(--radius-xl); padding: var(--space-3xl); color: var(--text-primary); }
+.contact-info-card { background: #FFFFFF; border-radius: var(--radius-xl); padding: var(--space-3xl); color: var(--text-primary); }
 .contact-info-card h3 { color: var(--text-primary); margin-bottom: var(--space-xl); }
 .contact-info-item { display: flex; gap: var(--space-md); margin-bottom: var(--space-xl); }
 .contact-info-item:last-child { margin-bottom: 0; }
@@ -38,8 +38,8 @@
 .contact-map { border-radius: var(--radius-xl); overflow: hidden; height: 300px; background: var(--surface-alt); }
 .contact-map iframe { width: 100%; height: 100%; border: 0; }
 
-.contact-social { display: flex; gap: var(--space-sm); margin-top: var(--space-xl); padding-top: var(--space-xl); border-top: 1px solid var(--glass-border); }
-.contact-social a { width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; border-radius: var(--radius-full); background: var(--glass); border: 1px solid var(--glass-border); color: var(--text-secondary); transition: all var(--transition-base); }
+.contact-social { display: flex; gap: var(--space-sm); margin-top: var(--space-xl); padding-top: var(--space-xl); border-top: 1px solid rgba(0,0,0,0.08); }
+.contact-social a { width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; border-radius: var(--radius-full); background: var(--glass); border: 1px solid rgba(0,0,0,0.08); color: var(--text-secondary); transition: all var(--transition-base); }
 .contact-social a:hover { background: var(--accent); color: var(--primary); border-color: var(--accent); }
 
 @media (max-width: 1024px) { .contact-grid { grid-template-columns: 1fr; } }

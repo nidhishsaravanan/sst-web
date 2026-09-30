@@ -60,8 +60,7 @@ export function renderContactPage() {
                 </div>
                 <div class="contact-card-content">
                   <h4>Email Support</h4>
-                  <p><a href="mailto:info@sreeswamytraders.com">info@sreeswamytraders.com</a></p>
-                  <p><a href="mailto:sales@sreeswamytraders.com">sales@sreeswamytraders.com</a></p>
+                  <p><a href="mailto:${SITE_CONFIG.email}">${SITE_CONFIG.email}</a></p>
                 </div>
               </div>
 

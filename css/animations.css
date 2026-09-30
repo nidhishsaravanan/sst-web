@@ -88,8 +88,8 @@
 
 /* ── Glow Pulse ── */
 @keyframes glowPulse {
-  0%, 100% { box-shadow: 0 0 20px rgba(212, 168, 75, 0.2); }
-  50% { box-shadow: 0 0 40px rgba(212, 168, 75, 0.4); }
+  0%, 100% { box-shadow: 0 0 20px rgba(237, 50, 55, 0.2); }
+  50% { box-shadow: 0 0 40px rgba(237, 50, 55, 0.4); }
 }
 
 .glow-pulse {
@@ -230,8 +230,8 @@
 
 /* ── Border Glow ── */
 @keyframes borderGlow {
-  0%, 100% { border-color: rgba(212, 168, 75, 0.2); }
-  50% { border-color: rgba(212, 168, 75, 0.6); }
+  0%, 100% { border-color: rgba(237, 50, 55, 0.2); }
+  50% { border-color: rgba(237, 50, 55, 0.6); }
 }
 
 /* ── Typewriter ── */

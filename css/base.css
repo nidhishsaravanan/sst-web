@@ -23,7 +23,7 @@ body {
   font-size: var(--fs-body);
   line-height: var(--lh-normal);
   color: var(--text-secondary);
-  background-color: var(--primary);
+  background-color: #FFFFFF;
   overflow-x: hidden;
   min-height: 100vh;
 }
@@ -85,7 +85,7 @@ p {
 /* ── Selection ── */
 ::selection {
   background: var(--accent);
-  color: var(--primary);
+  color: #FFFFFF;
 }
 
 /* ── Scrollbar ── */
@@ -94,7 +94,7 @@ p {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--primary);
+  background: #F5F5F5;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -128,18 +128,18 @@ p {
 }
 
 .section-dark {
-  background: var(--primary);
-  color: var(--text-primary);
+  background: var(--surface-dark);
+  color: #FFFFFF;
 }
 
 .section-dark h2,
 .section-dark h3,
 .section-dark h4 {
-  color: var(--text-primary);
+  color: #FFFFFF;
 }
 
 .section-dark p {
-  color: var(--text-secondary);
+  color: #B0BEC5;
 }
 
 .section-alt {
@@ -217,13 +217,13 @@ p {
 }
 
 .btn-primary {
-  background: var(--gradient-gold);
-  color: var(--primary);
-  box-shadow: var(--shadow-gold);
+  background: var(--accent);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-primary);
 }
 
 .btn-primary:hover {
-  background: var(--gradient-gold-hover);
+  background: var(--accent-dark);
   box-shadow: var(--shadow-gold-lg);
   transform: translateY(-2px);
 }
@@ -236,18 +236,18 @@ p {
 
 .btn-outline:hover {
   background: var(--accent);
-  color: var(--primary);
-  box-shadow: var(--shadow-gold);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-primary);
   transform: translateY(-2px);
 }
 
 .btn-white {
-  background: var(--text-primary);
-  color: var(--primary);
+  background: #FFFFFF;
+  color: var(--text-primary);
 }
 
 .btn-white:hover {
-  background: var(--surface-alt);
+  background: #F5F5F5;
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
 }
@@ -292,14 +292,14 @@ p {
   letter-spacing: var(--ls-wide);
   text-transform: uppercase;
   border-radius: var(--radius-pill);
-  background: rgba(212, 168, 75, 0.15);
+  background: rgba(237, 50, 55, 0.1);
   color: var(--accent);
-  border: 1px solid rgba(212, 168, 75, 0.3);
+  border: 1px solid rgba(237, 50, 55, 0.25);
 }
 
 .badge-dark {
-  background: rgba(10, 22, 40, 0.8);
-  color: var(--accent);
+  background: rgba(61, 61, 61, 0.85);
+  color: #FFFFFF;
 }
 
 /* ── Card ── */
@@ -325,8 +325,8 @@ p {
 
 .card-glass:hover {
   background: var(--glass-light);
-  border-color: rgba(212, 168, 75, 0.3);
-  box-shadow: 0 8px 32px rgba(212, 168, 75, 0.1);
+  border-color: rgba(237, 50, 55, 0.2);
+  box-shadow: 0 8px 32px rgba(237, 50, 55, 0.08);
 }
 
 /* ── Breadcrumb ── */
@@ -429,19 +429,19 @@ p {
 
 /* ── Page Hero Banner ── */
 .page-hero {
-  background: var(--gradient-hero);
+  background: linear-gradient(135deg, #3D3D3D 0%, #535353 100%);
   padding: var(--space-4xl) 0 var(--space-2xl);
   padding-top: calc(var(--header-height) + var(--space-2xl));
 }
 
 .page-title {
   font-size: var(--fs-h1);
-  color: var(--text-primary);
+  color: #FFFFFF;
   font-weight: var(--fw-extrabold);
 }
 
 .page-subtitle {
-  color: var(--text-secondary);
+  color: #B0BEC5;
   font-size: var(--fs-body);
   margin-top: var(--space-sm);
   max-width: 650px;
@@ -478,9 +478,9 @@ p {
   text-transform: uppercase;
   letter-spacing: var(--ls-wider);
   color: var(--accent);
-  border: 1px solid rgba(212, 168, 75, 0.3);
+  border: 1px solid rgba(237, 50, 55, 0.25);
   border-radius: var(--radius-pill);
-  background: rgba(212, 168, 75, 0.1);
+  background: rgba(237, 50, 55, 0.08);
 }
 
 /* ── Grid Layouts ── */
@@ -542,15 +542,15 @@ p {
 
 /* ── CTA Section ── */
 .cta-section {
-  background: var(--gradient-hero);
+  background: linear-gradient(135deg, #3D3D3D 0%, #535353 100%);
 }
 
 .cta-section h2 {
-  color: var(--text-primary);
+  color: #FFFFFF;
 }
 
 .cta-section p {
-  color: var(--text-secondary);
+  color: #B0BEC5;
 }
 
 .cta-actions {
@@ -583,7 +583,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--primary);
+  background: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;

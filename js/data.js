@@ -7,14 +7,14 @@ export const SITE_CONFIG = {
   shortName: 'SST',
   tagline: 'Piping Solutions You Can Trust',
   phone: '+91 95009 88199',
-  email: 'info@sreeswamytraders.com',
+  email: 'sreeswamytraders88@gmail.com',
   whatsapp: '919500988199',
   whatsappNumber: '919500988199',
   address: 'Tamil Nadu, India',
   founded: '2010',
   social: {
     facebook: '#',
-    instagram: '#',
+    instagram: 'https://www.instagram.com/sree_swamy_traders/',
     youtube: '#',
     linkedin: '#'
   }
