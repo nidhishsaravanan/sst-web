@@ -1,0 +1,35 @@
+/* ============================================
+   REACT-SPECIFIC HELPERS
+   ============================================ */
+
+/* Icon wrapper renders no box of its own, so the inner <svg>
+   is laid out exactly as if it were a direct child (same as the old string templates). */
+.icon-wrap {
+  display: contents;
+}
+
+/* Route change fade-in (replaces the old router's manual opacity transition) */
+.page-transition {
+  animation: pageFadeIn 0.3s ease both;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile filter drawer header (was toggled via inline style before) */
+.products-sidebar.open .filter-close-btn {
+  display: flex !important;
+}
+
+/* Lift sector card image on hover */
+.application-card:hover img {
+  transform: scale(1.06);
+}
