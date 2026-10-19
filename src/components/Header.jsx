@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Icon from './Icon.jsx';
+import BrandLogo from './BrandLogo.jsx';
 import { SITE_CONFIG, PRODUCTS } from '../data/siteData.js';
 
 const NAV_LINKS = [
@@ -85,14 +86,38 @@ export default function Header() {
   return (
     <>
       <header className={`header${scrolled ? ' scrolled' : ''}`} id="main-header">
+        {/* Contact Topbar */}
+        <div className="topbar">
+          <div className="container topbar-inner">
+            <div className="topbar-group">
+              <a href={`tel:${SITE_CONFIG.phone.replace(/\s/g, '')}`} className="topbar-item" id="topbar-phone">
+                <Icon name="phone" /> {SITE_CONFIG.phone}
+              </a>
+              <span className="topbar-sep"></span>
+              <a href={`mailto:${SITE_CONFIG.email}`} className="topbar-item" id="topbar-email">
+                <Icon name="mail" /> {SITE_CONFIG.email}
+              </a>
+              <span className="topbar-sep topbar-loc"></span>
+              <span className="topbar-item topbar-loc">
+                <Icon name="mapPin" /> {SITE_CONFIG.address}
+              </span>
+            </div>
+            <div className="topbar-group">
+              <span className="topbar-motto">{SITE_CONFIG.motto}</span>
+              <a href={SITE_CONFIG.social.instagram} className="topbar-icon" target="_blank" rel="noopener noreferrer" aria-label="Instagram" id="topbar-instagram">
+                <Icon name="instagram" />
+              </a>
+              <a href={`https://wa.me/${SITE_CONFIG.whatsapp}`} className="topbar-icon topbar-icon--wa" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" id="topbar-whatsapp">
+                <Icon name="whatsapp" />
+              </a>
+            </div>
+          </div>
+        </div>
+
         <div className="container" style={{ maxWidth: 'var(--container-wide)' }}>
           <div className="header-inner">
-            <Link to="/" className="header-logo">
-              <div className="logo-icon">SST</div>
-              <div className="logo-text">
-                <span className="logo-name">{SITE_CONFIG.name}</span>
-                <span className="logo-tagline">{SITE_CONFIG.tagline}</span>
-              </div>
+            <Link to="/" className="header-logo" aria-label={`${SITE_CONFIG.name} — Home`}>
+              <BrandLogo />
             </Link>
 
             <nav className="nav-desktop">

@@ -1,14 +1,16 @@
 import { Link } from 'react-router-dom';
 import Icon from './Icon.jsx';
 import { CATEGORIES, SITE_CONFIG } from '../data/siteData.js';
-import { buildWhatsAppUrl, getProductPlaceholderSVG } from '../utils/helpers.js';
+import { buildWhatsAppUrl } from '../utils/helpers.js';
 
 export function getCategoryName(categoryId) {
   return CATEGORIES.find((c) => c.id === categoryId)?.name || categoryId;
 }
 
+/** Product photo: explicit product image first, otherwise the category photograph. */
 export function getProductImage(product) {
-  return product.images?.length > 0 ? product.images[0] : getProductPlaceholderSVG(product.name, product.category);
+  if (product.images?.length > 0) return product.images[0];
+  return CATEGORIES.find((c) => c.id === product.category)?.image || '/images/categories/pvc.jpg';
 }
 
 /** Product card used on the Products listing, homepage Featured section, and Related Products. */
@@ -44,7 +46,14 @@ export default function ProductCard({ product, badge, reveal = false }) {
           <Link to={url} className="product-card-link">
             View Details <Icon name="arrowRight" />
           </Link>
-          <a href={waUrl} target="_blank" rel="noopener noreferrer" className="product-card-whatsapp" title="Enquire on WhatsApp">
+          <a
+            href={waUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="product-card-whatsapp"
+            title="Enquire on WhatsApp"
+            aria-label={`Enquire about ${product.name} on WhatsApp`}
+          >
             <Icon name="whatsapp" />
           </a>
         </div>

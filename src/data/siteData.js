@@ -5,7 +5,8 @@
 export const SITE_CONFIG = {
   name: 'Sree Swamy Traders',
   shortName: 'SST',
-  tagline: 'Piping Solutions You Can Trust',
+  tagline: 'Authorised Pipe Distributors',
+  motto: 'Where Every Connection Counts',
   phone: '+91 95009 88199',
   email: 'sreeswamytraders88@gmail.com',
   whatsapp: '919500988199',
@@ -21,18 +22,18 @@ export const SITE_CONFIG = {
 };
 
 export const CATEGORIES = [
-  { id: 'pvc', name: 'PVC Pipes & Fittings', icon: 'pipe', count: 0 },
-  { id: 'cpvc', name: 'CPVC Pipes & Fittings', icon: 'pipe', count: 0 },
-  { id: 'upvc', name: 'UPVC Pipes & Fittings', icon: 'pipe', count: 0 },
-  { id: 'hdpe', name: 'HDPE Pipes & Fittings', icon: 'pipe', count: 0 },
-  { id: 'ppr', name: 'PPR Pipes & Fittings', icon: 'pipe', count: 0 },
-  { id: 'swr', name: 'SWR Drainage Pipes', icon: 'drain', count: 0 },
-  { id: 'column', name: 'Column Pipes', icon: 'borewell', count: 0 },
-  { id: 'casing', name: 'Casing Pipes', icon: 'casing', count: 0 },
-  { id: 'agri', name: 'Agricultural Pipes', icon: 'agri', count: 0 },
-  { id: 'tanks', name: 'Water Tanks', icon: 'tank', count: 0 },
-  { id: 'accessories', name: 'Plumbing Accessories', icon: 'wrench', count: 0 },
-  { id: 'gi-ms', name: 'GI / MS Pipes', icon: 'metal', count: 0 },
+  { id: 'pvc', name: 'PVC Pipes & Fittings', icon: 'pipe', image: '/images/categories/pvc.jpg', count: 0 },
+  { id: 'cpvc', name: 'CPVC Pipes & Fittings', icon: 'pipe', image: '/images/categories/cpvc.jpg', count: 0 },
+  { id: 'upvc', name: 'UPVC Pipes & Fittings', icon: 'pipe', image: '/images/categories/upvc.jpg', count: 0 },
+  { id: 'hdpe', name: 'HDPE Pipes & Fittings', icon: 'pipe', image: '/images/categories/hdpe.jpg', count: 0 },
+  { id: 'ppr', name: 'PPR Pipes & Fittings', icon: 'pipe', image: '/images/categories/ppr.jpg', count: 0 },
+  { id: 'swr', name: 'SWR Drainage Pipes', icon: 'drain', image: '/images/categories/swr.jpg', count: 0 },
+  { id: 'column', name: 'Column Pipes', icon: 'borewell', image: '/images/categories/column.jpg', count: 0 },
+  { id: 'casing', name: 'Casing Pipes', icon: 'casing', image: '/images/categories/casing.jpg', count: 0 },
+  { id: 'agri', name: 'Agricultural Pipes', icon: 'agri', image: '/images/categories/agri.jpg', count: 0 },
+  { id: 'tanks', name: 'Water Tanks', icon: 'tank', image: '/images/categories/tanks.jpg', count: 0 },
+  { id: 'accessories', name: 'Plumbing Accessories', icon: 'wrench', image: '/images/categories/accessories.jpg', count: 0 },
+  { id: 'gi-ms', name: 'GI / MS Pipes', icon: 'metal', image: '/images/categories/gi-ms.jpg', count: 0 },
 ];
 
 export const APPLICATIONS = [

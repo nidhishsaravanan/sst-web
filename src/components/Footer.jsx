@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Icon from './Icon.jsx';
+import BrandLogo from './BrandLogo.jsx';
 import { SITE_CONFIG, CATEGORIES } from '../data/siteData.js';
 
 export default function Footer() {
@@ -22,8 +23,7 @@ export default function Footer() {
               {/* About Column */}
               <div className="footer-about">
                 <div className="footer-logo">
-                  <div className="footer-logo-icon">SST</div>
-                  <span className="footer-logo-text">{SITE_CONFIG.name}</span>
+                  <BrandLogo variant="dark" />
                 </div>
                 <p>
                   Your trusted partner for comprehensive piping solutions in Tamil Nadu. We distribute premium quality pipes,

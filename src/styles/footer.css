@@ -3,8 +3,8 @@
    ============================================ */
 
 .footer {
-  background: #3D3D3D;
-  color: #B0BEC5;
+  background: var(--gradient-dark);
+  color: rgba(255,255,255,0.72);
   position: relative;
   overflow: hidden;
 }
@@ -60,7 +60,7 @@
 }
 
 .footer-about p {
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.68);
   font-size: var(--fs-small);
   line-height: var(--lh-relaxed);
   margin-bottom: var(--space-xl);
@@ -80,7 +80,7 @@
   border-radius: var(--radius-full);
   background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.12);
-  color: #B0BEC5;
+  color: rgba(255,255,255,0.72);
   transition: all var(--transition-base);
 }
 
@@ -126,7 +126,7 @@
 }
 
 .footer-links a {
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.68);
   font-size: var(--fs-small);
   transition: all var(--transition-base);
   display: flex;
@@ -184,7 +184,7 @@
 
 .footer-contact-item .info p,
 .footer-contact-item .info a {
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.68);
   font-size: var(--fs-small);
   line-height: var(--lh-normal);
 }
@@ -209,7 +209,7 @@
 
 .footer-bottom p {
   font-size: var(--fs-xs);
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .footer-bottom p .heart {
@@ -223,7 +223,7 @@
 
 .footer-bottom-links a {
   font-size: var(--fs-xs);
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.5);
   transition: color var(--transition-base);
 }
 

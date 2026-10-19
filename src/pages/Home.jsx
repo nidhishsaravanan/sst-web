@@ -11,18 +11,21 @@ const HERO_SLIDES = [
   {
     img: 'https://images.unsplash.com/photo-1541888946425-d0fbb186f5f7?auto=format&fit=crop&w=1920&q=80',
     alt: 'Piping Warehouse',
-    overlay: undefined,
   },
   {
     img: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1920&q=80',
     alt: 'Industrial Piping',
-    overlay: 'linear-gradient(135deg, rgba(30,58,95,0.92), rgba(10,22,40,0.85))',
   },
   {
     img: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80',
     alt: 'Construction Pipelines',
-    overlay: 'linear-gradient(135deg, rgba(10,22,40,0.95), rgba(30,58,95,0.88))',
   },
+];
+
+const HERO_TRUST = [
+  { value: '15+', label: 'Years of Trust' },
+  { value: '5,000+', label: 'Products in Stock' },
+  { value: '10+', label: 'Leading Brands' },
 ];
 
 const ABOUT_FEATURES = [
@@ -94,7 +97,7 @@ export default function Home() {
           {HERO_SLIDES.map((slide, i) => (
             <div key={slide.alt} className={`hero-slide${i === heroIndex ? ' active' : ''}`}>
               <img src={slide.img} alt={slide.alt} className="hero-slide-bg" />
-              <div className="hero-slide-overlay" style={slide.overlay ? { background: slide.overlay } : undefined}></div>
+              <div className="hero-slide-overlay"></div>
             </div>
           ))}
         </div>
@@ -103,24 +106,32 @@ export default function Home() {
           <div className="hero-content">
             <div className="hero-badge">
               <span className="dot"></span>
-              Trusted Pipe Distributors Since {SITE_CONFIG.founded}
+              Authorised Distributors · Since {SITE_CONFIG.founded}
             </div>
             <h1>
-              <span className="highlight">Piping Solutions</span>
+              Engineered to Flow.
               <br />
-              You Can Trust
+              <span className="highlight">Built to Last.</span>
             </h1>
             <p className="hero-description">
-              Your one-stop destination for premium quality pipes, fittings &amp; plumbing accessories from India's leading
-              brands. Serving residential, commercial, industrial &amp; agricultural sectors across Tamil Nadu.
+              Premium pipes, fittings &amp; water-management solutions from India's most trusted brands — supplied with
+              expert guidance to homes, builders, industries and farms across Tamil Nadu.
             </p>
             <div className="hero-actions">
-              <Link to="/products" className="btn btn-primary btn-lg">
+              <Link to="/products" className="btn btn-primary btn-lg" id="hero-explore-btn">
                 Explore Products <Icon name="arrowRight" />
               </Link>
-              <Link to="/contact" className="btn btn-glass btn-lg">
-                Get a Quote
+              <Link to="/contact" className="btn btn-glass btn-lg" id="hero-quote-btn">
+                Request a Quote
               </Link>
+            </div>
+            <div className="hero-trust">
+              {HERO_TRUST.map((t) => (
+                <div key={t.label} className="hero-trust-item">
+                  <span className="hero-trust-value">{t.value}</span>
+                  <span className="hero-trust-label">{t.label}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -144,14 +155,19 @@ export default function Home() {
 
       {/* Trusted Brands */}
       <section className="brands-strip">
-        <div className="section-label">Authorized Distributors Of</div>
-        <div className="brands-marquee">
-          <div className="brands-track">
-            {[...BRANDS, ...BRANDS].map((brand, i) => (
-              <span key={`${brand}-${i}`} className="brand-item">
-                {brand}
-              </span>
-            ))}
+        <div className="container brands-strip-inner">
+          <div className="section-label">
+            <span>Authorised</span> Distributors Of
+          </div>
+          <div className="brands-marquee">
+            <div className="brands-track">
+              {[...BRANDS, ...BRANDS].map((brand, i) => (
+                <span key={`${brand}-${i}`} className="brand-item">
+                  <span className="brand-item-mark">{brand.charAt(0)}</span>
+                  {brand}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -204,7 +220,7 @@ export default function Home() {
       </section>
 
       {/* Product Categories */}
-      <section className="product-categories section-dark">
+      <section className="product-categories">
         <div className="container">
           <div className="section-title reveal">
             <h2>
@@ -214,11 +230,21 @@ export default function Home() {
             <p>Explore our comprehensive range of piping products across 12+ categories, sourced from India's most trusted brands.</p>
           </div>
           <div className="categories-grid reveal-stagger">
-            {CATEGORIES.map((cat) => (
-              <Link key={cat.id} to={`/products?category=${cat.id}`} className="category-card reveal">
-                <div className="category-icon"><Icon svg={getCategoryIcon(cat.id)} /></div>
-                <h4>{cat.name}</h4>
-                <p>{cat.count} products</p>
+            {CATEGORIES.map((cat, i) => (
+              <Link key={cat.id} to={`/products?category=${cat.id}`} className="category-card reveal" id={`category-${cat.id}`}>
+                <img src={cat.image} alt={cat.name} loading="lazy" className="category-card-img" />
+                <span className="category-card-overlay" aria-hidden="true"></span>
+                <span className="category-index">{String(i + 1).padStart(2, '0')}</span>
+                <div className="category-card-content">
+                  <div className="category-icon"><Icon svg={getCategoryIcon(cat.id)} /></div>
+                  <h4>{cat.name}</h4>
+                  <p>
+                    {cat.count} {cat.count === 1 ? 'product line' : 'product lines'}
+                  </p>
+                  <span className="category-explore">
+                    Explore Range <Icon name="arrowRight" />
+                  </span>
+                </div>
               </Link>
             ))}
           </div>
@@ -235,7 +261,7 @@ export default function Home() {
             <span className="subtitle-line" style={{ margin: '0.75rem auto 1.5rem auto' }}></span>
             <p>Handpicked top-selling pipes trusted by engineers, contractors, and builders across Tamil Nadu.</p>
           </div>
-          <div className="products-grid mt-4">
+          <div className="products-grid products-grid--featured mt-4">
             {featuredProducts.map((p) => (
               <ProductCard key={p.id} product={p} badge="Featured" reveal />
             ))}
@@ -259,8 +285,9 @@ export default function Home() {
             <p>What makes us the preferred choice for thousands of customers across Tamil Nadu.</p>
           </div>
           <div className="why-choose-grid reveal-stagger">
-            {WHY_CHOOSE.map((item) => (
+            {WHY_CHOOSE.map((item, i) => (
               <div key={item.title} className="why-card reveal">
+                <span className="why-card-index">{String(i + 1).padStart(2, '0')}</span>
                 <div className="why-card-icon"><Icon name={item.icon} /></div>
                 <h4>{item.title}</h4>
                 <p>{item.text}</p>
@@ -311,7 +338,7 @@ export default function Home() {
                 <div
                   className="application-card-overlay"
                   style={{
-                    background: 'linear-gradient(180deg, rgba(10,22,40,0.2) 0%, rgba(10,22,40,0.92) 85%)',
+                    background: 'linear-gradient(180deg, rgba(26,35,44,0.05) 0%, rgba(26,35,44,0.35) 45%, rgba(15,22,29,0.92) 100%)',
                     position: 'relative',
                     zIndex: 2,
                     height: '100%',
@@ -322,7 +349,7 @@ export default function Home() {
                   }}
                 >
                   <h4>{app.name}</h4>
-                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.875rem', marginTop: '0.35rem' }}>{app.desc}</p>
+                  <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.875rem', marginTop: '0.35rem' }}>{app.desc}</p>
                 </div>
               </div>
             ))}

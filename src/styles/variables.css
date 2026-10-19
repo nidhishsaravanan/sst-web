@@ -1,67 +1,92 @@
 /* ============================================
    SREE SWAMY TRADERS — Design System Tokens
-   Supreme Industries Inspired Color Scheme
+   Brand identity: Slate / Charcoal × Teal → Mint gradient
    ============================================ */
 
 :root {
-  /* ── Primary Colors (Supreme Red) ── */
-  --primary: #ED3237;
-  --primary-light: #F05A5E;
-  --primary-medium: #D42B30;
-  --primary-dark: #B8232A;
-  
-  /* ── Accent (Red - same as primary for Supreme style) ── */
-  --accent: #ED3237;
-  --accent-light: #F05A5E;
-  --accent-dark: #B8232A;
-  --accent-glow: rgba(237, 50, 55, 0.25);
-  
-  /* ── Secondary Blues ── */
-  --secondary: #337AB7;
-  --secondary-light: #4A9AD4;
-  --secondary-dark: #286090;
-  
+  /* ── Slate / Charcoal (primary) ── */
+  --slate-950: #0F161D;
+  --slate-900: #1A232C;
+  --slate-800: #24303B;
+  --slate-700: #33414E;
+  --slate-600: #4A5A68;
+  --primary: #1A232C;
+  --primary-light: #33414E;
+  --primary-medium: #24303B;
+  --primary-dark: #0F161D;
+
+  /* ── Teal → Mint (brand accent) ── */
+  --teal-700: #0A6E61;
+  --teal-600: #0E8F7E;
+  --teal-500: #12A58F;
+  --mint-400: #2FCB9B;
+  --mint-300: #5EE6B8;
+  --accent: #0E8F7E;
+  --accent-light: #19B394;
+  --accent-dark: #0A6E61;
+  --accent-soft: #E3F6F1;
+  --accent-glow: rgba(14, 143, 126, 0.22);
+
+  /* ── Mint detail tone (thin lines, highlights on dark) ── */
+  --mint: #5EE6B8;
+  --mint-soft: rgba(94, 230, 184, 0.18);
+  --champagne: var(--mint);            /* legacy alias */
+  --champagne-soft: var(--mint-soft);  /* legacy alias */
+
+  /* ── Secondary ── */
+  --secondary: #4A5A68;
+  --secondary-light: #5E7080;
+  --secondary-dark: #33414E;
+
   /* ── Text ── */
-  --text-primary: #3D3D3D;
-  --text-secondary: #707070;
-  --text-muted: #9E9E9E;
-  --text-dark: #3D3D3D;
-  --text-dark-secondary: #707070;
+  --text-primary: #1A232C;
+  --text-secondary: #4F5D6A;
+  --text-muted: #8A96A1;
+  --text-dark: #1A232C;
+  --text-dark-secondary: #4F5D6A;
   --text-white: #FFFFFF;
   --text-on-primary: #FFFFFF;
-  
+  --text-on-dark: rgba(255, 255, 255, 0.78);
+
   /* ── Surfaces ── */
-  --surface: #F5F5F5;
-  --surface-alt: #E8F0F2;
-  --surface-dark: #3D3D3D;
+  --surface: #F6F8F8;          /* soft neutral */
+  --surface-alt: #EEF3F2;      /* mint-tinted mist */
+  --surface-dark: #1A232C;     /* slate */
   --surface-card: #FFFFFF;
   --surface-white: #FFFFFF;
-  
-  /* ── Glassmorphism (adapted for light theme) ── */
+  --border: #E2E8E7;
+  --border-strong: #CED7D6;
+
+  /* ── Glass (light theme) ── */
   --glass: rgba(255, 255, 255, 0.85);
-  --glass-border: rgba(0, 0, 0, 0.08);
+  --glass-border: rgba(26, 35, 44, 0.08);
   --glass-light: rgba(255, 255, 255, 0.95);
-  --glass-dark: rgba(61, 61, 61, 0.92);
-  
+  --glass-dark: rgba(26, 35, 44, 0.92);
+
   /* ── Status Colors ── */
-  --success: #4CAF50;
-  --warning: #FF9800;
-  --error: #F44336;
-  --info: #2196F3;
-  
+  --success: #22A06B;
+  --warning: #E59A1C;
+  --error: #D93A3A;
+  --info: #2A6FDB;
+
   /* ── Gradients ── */
-  --gradient-primary: linear-gradient(135deg, #ED3237, #F05A5E);
-  --gradient-primary-hover: linear-gradient(135deg, #F05A5E, #ED3237);
-  --gradient-gold: linear-gradient(135deg, #ED3237, #F05A5E);
-  --gradient-gold-hover: linear-gradient(135deg, #F05A5E, #ED3237);
-  --gradient-dark: linear-gradient(180deg, #3D3D3D 0%, #2A2A2A 100%);
-  --gradient-hero: linear-gradient(135deg, rgba(237, 50, 55, 0.88) 0%, rgba(61, 61, 61, 0.92) 100%);
-  --gradient-card: linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(245,245,245,0.7) 100%);
-  --gradient-section: linear-gradient(180deg, #F5F5F5 0%, #FFFFFF 50%, #E8F0F2 100%);
-  
+  --gradient-brand: linear-gradient(135deg, #0E8F7E 0%, #2FCB9B 100%);
+  --gradient-primary: linear-gradient(135deg, #0E8F7E 0%, #12A58F 100%);
+  --gradient-primary-hover: linear-gradient(135deg, #0A6E61 0%, #0E8F7E 100%);
+  --gradient-gold: var(--gradient-brand);   /* legacy alias */
+  --gradient-gold-hover: var(--gradient-primary-hover);
+  --gradient-slate: linear-gradient(135deg, #1A232C 0%, #33414E 100%);
+  --gradient-navy: var(--gradient-slate);   /* legacy alias */
+  --gradient-dark: linear-gradient(160deg, #1A232C 0%, #24303B 55%, #0F161D 100%);
+  --gradient-hero: linear-gradient(105deg, rgba(15, 22, 29, 0.94) 0%, rgba(26, 35, 44, 0.80) 42%, rgba(10, 110, 97, 0.55) 78%, rgba(18, 165, 143, 0.35) 100%);
+  --gradient-card: linear-gradient(145deg, #FFFFFF 0%, #F6F8F8 100%);
+  --gradient-section: linear-gradient(180deg, #F6F8F8 0%, #FFFFFF 50%, #EEF3F2 100%);
+
   /* ── Typography ── */
-  --font-heading: 'Outfit', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-brand: 'Cinzel', 'Playfair Display', serif;
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-ui: 'Plus Jakarta Sans', system-ui, sans-serif;
   
   --fs-display: clamp(2.5rem, 5vw, 4.5rem);
   --fs-h1: clamp(2rem, 4vw, 3.5rem);
@@ -114,13 +139,13 @@
   --radius-pill: 100px;
   
   /* ── Shadows (lighter for white theme) ── */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.1);
-  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.12);
-  --shadow-gold: 0 4px 24px rgba(237, 50, 55, 0.2);
-  --shadow-gold-lg: 0 8px 40px rgba(237, 50, 55, 0.18);
-  --shadow-primary: 0 4px 24px rgba(237, 50, 55, 0.2);
+  --shadow-sm: 0 1px 2px rgba(26, 35, 44, 0.04), 0 2px 8px rgba(26, 35, 44, 0.05);
+  --shadow-md: 0 2px 6px rgba(26, 35, 44, 0.05), 0 8px 20px rgba(26, 35, 44, 0.07);
+  --shadow-lg: 0 4px 12px rgba(26, 35, 44, 0.06), 0 18px 40px rgba(26, 35, 44, 0.10);
+  --shadow-xl: 0 8px 20px rgba(26, 35, 44, 0.08), 0 28px 60px rgba(26, 35, 44, 0.14);
+  --shadow-gold: 0 6px 20px rgba(14, 143, 126, 0.22);
+  --shadow-gold-lg: 0 10px 32px rgba(14, 143, 126, 0.26);
+  --shadow-primary: 0 6px 20px rgba(14, 143, 126, 0.22);
   --shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.04);
   
   /* ── Transitions ── */
@@ -141,6 +166,17 @@
   --z-top: 999;
   
   /* ── Header ── */
-  --header-height: 80px;
-  --header-height-scrolled: 64px;
+  --topbar-height: 40px;
+  --nav-height: 80px;
+  --nav-height-scrolled: 66px;
+  /* total offset pages need below the fixed header */
+  --header-height: calc(var(--topbar-height) + var(--nav-height));
+  --header-height-scrolled: var(--nav-height-scrolled);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --topbar-height: 0px;
+    --nav-height: 70px;
+  }
 }
